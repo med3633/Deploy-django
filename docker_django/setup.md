@@ -97,4 +97,19 @@ root /var/www/react
 ```bash
 \\wsi$\docker-desktop-data\version-pack-data\community\docker\volumes\
 ```
+![image](https://github.com/med3633/Deploy-django/assets/160378998/2d6081df-ceeb-4ea9-aabe-5ea475600f2d)
+```bash
+upstream api {
+  server backend:8000
+}
+server {
+#connect to react in www
+ listen 8080;
+location / {
+root /var/www/react
+}
+} 
+```
+
+
  
