@@ -98,16 +98,26 @@ root /var/www/react
 \\wsi$\docker-desktop-data\version-pack-data\community\docker\volumes\
 ```
 ![image](https://github.com/med3633/Deploy-django/assets/160378998/2d6081df-ceeb-4ea9-aabe-5ea475600f2d)
+![image](https://github.com/med3633/Deploy-django/assets/160378998/9234d12f-48a3-43b8-9d1c-915ec59673ff)
+
 ```bash
 upstream api {
-  server backend:8000
+  server backend:8000;
 }
 server {
 #connect to react in www
  listen 8080;
 location / {
-root /var/www/react
+root /var/www/react;
 }
+
+# listen for request
+location /api/ {
+  proxy_pass http://api
+# header
+  proxy_set_header Host $http_host;
+}
+
 } 
 ```
 
