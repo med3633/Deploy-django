@@ -81,3 +81,8 @@ crontab -e
 ```bash
 0 5 1 */2 * /usr/bin/docker compose -f /home/ubuntu/setup-ssl-nginx-docker/docker-compose.yml up certbot
 ```
+
+# to deploy django show this article
+```bash
+https://medium.com/@akshatgadodia/deploying-a-django-application-with-docker-nginx-and-certbot-eaf576463f19
+```
