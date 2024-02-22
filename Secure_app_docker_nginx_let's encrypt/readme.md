@@ -86,3 +86,7 @@ crontab -e
 ```bash
 https://medium.com/@akshatgadodia/deploying-a-django-application-with-docker-nginx-and-certbot-eaf576463f19
 ```
+# show this article if not work
+```bash
+https://www.programonaut.com/setup-ssl-with-docker-nginx-and-lets-encrypt/
+```
